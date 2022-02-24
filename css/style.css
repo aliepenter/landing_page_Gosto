@@ -1839,8 +1839,8 @@ a.button-theme {
   .footer-main .container .items >div:not(:last-child){
     margin-bottom: 50px;
   }
-  .header__text_bottom a {
-    padding: 19px 30px;
+  .header-inner .button-slider {
+    padding: 20px 46px;
   }
   .footer .footer__footer .content-footer .title-footer{
     font-size: 30px;
@@ -2111,13 +2111,6 @@ h3 {
   .header__text {
     padding: 30px 0 0;
   }
-  .header__text_bottom,
-  .bottom {
-    margin-top: 30px;
-  }
-/*  .footer {
-    margin-top: 90px;
-  }*/
   .header__text h2 {
     line-height: 60px;
   }
@@ -2163,7 +2156,7 @@ h3 {
   }
   .header-inner h1{
     margin-bottom: 50px;
-    font-size: 48px;
+    font-size: 54px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -2235,6 +2228,11 @@ h3 {
 @media only screen and (min-width: 991px) {
   .tab-top .images-shop:hover{
     box-shadow: 0px 15px 40px 0px rgb(226 232 238);
+  }
+  .transform .shared .images-info {
+    transition: all .3s ease;
+  }
+  .transform .shared .images-info:hover{
     transform: translateY(-20px);
   }
   .tab-blog .images-shop:hover{
@@ -2245,9 +2243,6 @@ h3 {
   }
   .images-animation .images-shop{
     transition: all .3s ease;
-  }
-  .images-animation .images-shop:hover{
-    transform: translateY(-20px);
   }
 }
 @media (min-width: 576px) and (max-width: 991px) {
@@ -2367,14 +2362,7 @@ h3 {
     margin-bottom: 30px;
   }
   .header-inner h1{
-    font-size: 37px;
-  }
-  .header-inner p{
-    font-size: 16px;
-  }
-  .header-inner .button-slider{
-    padding: 16px 48px;
-    font-size: 11px;
+    font-size: 48px;
   }
 }
 .feauter .col-md-3 {
@@ -2653,16 +2641,6 @@ h3 {
   .Reviews .list-item-review .owl-stage-outer{
     margin-bottom: 30px;
   }
-  .header-inner h1{
-    font-size: 28px;
-    margin: 10px 0 40px;
-  }
-  .header-inner p{
-    font-size: 13px;
-  }
-  .header-inner .button-slider{
-    padding: 14px 36px;
-  }
   .header{
     padding: 20px 0;
   }
@@ -2677,6 +2655,9 @@ h3 {
   }
   .nav-stacked{
     margin-bottom: 30px;
+  }
+  .header-inner h1{
+    font-size: 38px;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -2719,6 +2700,16 @@ h3 {
   }
   .images-animation .title-content{
     margin-bottom: 20px;
+  }
+  .header-inner h1{
+    font-size: 34px;
+    margin-bottom: 35px;
+  }
+  .header-inner p{
+    font-size: 14px;
+  }
+  .header-inner .button-slider{
+    padding: 18px 34px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
