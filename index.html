@@ -8,10 +8,10 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="dist/aos.css?1233231" />
+	<link rel="stylesheet" href="dist/aos.css?12332313" />
 	<link rel="stylesheet" href="css/owl.carousel.css" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/style.css?v=1233213" />
+	<link rel="stylesheet" href="css/style.css?v=3344" />
 	<link rel="icon" type="img/x-icon" href="img/favi.png" />
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<link rel="stylesheet" href="fonts/fontawesome/css/all.css">
@@ -28,13 +28,15 @@
 						</a>
 					</div>
 					<div class="logo-menu">
-						<ul class="flex-layout">
+						<div class="off-modal-layer"></div>
+						<ul class="flex-layout list-nav">
 							<li><a href="#">Demos</a></li>
 							<li><a href="#features">Features</a></li>
 							<li><a href="#mobile version">Mobile Version</a></li>
 							<li><a href="#">Documentation</a></li>
 							<li><a href="#">Support</a></li>
 						</ul>
+						
 					</div>
 					<div class="header_button hidden-menu header__text_bottom"><a href="#" class="button">Buy Theme Now</a></div>
 					<div class="menu-icon">
@@ -1046,6 +1048,7 @@
 				event.preventDefault();
 				$('.logo-menu').toggleClass('active-menu')
 				$('.menu-icon').toggleClass('active-menu')
+				$('body').toggleClass('modal-opened')
 			})
 			$('.lazy-video').height($(window).height())
 			var video = $(".lazy-video").get(0);
@@ -1166,4 +1169,20 @@
 			});
 		});
 	</script>
+	<!-- <div class="mobile-menu-overlay"></div>
+	<div class="mobile-navigation">
+		<div class="close-menu-moblie">
+			<a href="#"></a>
+		</div>
+		<div class="mobile-menu-container logo-menu">
+			<ul >
+				<li><a href="#">Demos</a></li>
+				<li><a href="#">Features</a></li>
+				<li><a href="#">Mobile Version</a></li>
+				<li><a href="#">Documentation</a></li>
+				<li><a href="#">Support</a></li>
+				<li><a href="#">Buy Now</a></li>
+			</ul>
+		</div>
+	</div> -->
 </body>

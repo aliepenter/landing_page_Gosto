@@ -111,7 +111,7 @@ html {
   }
 }
 .header {
-  padding: 30px 0;
+  padding: 22px 0;
   position: absolute;
   top: 0;
   width: 100%;
@@ -233,7 +233,7 @@ html {
     left: 0;
     transform: translateY(-50%);
     right: 0;
-    z-index: 2;
+    z-index: 0;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
@@ -766,6 +766,9 @@ Common
 body {
   text-align: center;
 }
+.logo{
+  padding: 8px 0;
+}
 .action {
   background-color: #303030;
   padding: 50px 0;
@@ -1036,7 +1039,7 @@ color: #0a2747;
 }
 .demo.elementor .image1{
   position: absolute;
-  z-index: 3;
+  z-index: 1;
 }
 .demo.elementor .image2{
   position: absolute;
@@ -1563,6 +1566,10 @@ color: #0a2747;
   color: #fff;
   font-weight: 500;
 }
+/* .mobile-navigation{
+  display: none;
+} */
+
 /*--------------------------------------------------------------
 Header
 --------------------------------------------------------------*/
@@ -2048,6 +2055,9 @@ a.button-theme {
   font-weight: 500;
   color: #ffffff;
 }
+.header-content .menu-icon.active-menu{
+  transform: none;
+}
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
@@ -2169,9 +2179,6 @@ h3 {
     font-size: 54px;
   }
 }
-.active-menu{
-  transform: translateX(0) !important;
-}
 .menu-icon.active-menu a::before{
   content: "\00d7" !important;
   font-size: 35px;
@@ -2195,9 +2202,6 @@ h3 {
   .header-banner .images-grid{
     display: none;
   }
-  .logo-menu{
-    transform: translateX(-100%);
-  }
   .hidden-menu{
     display: none;
   }
@@ -2207,6 +2211,112 @@ h3 {
   .header-inner h1{
     font-size: 49px;
   }
+  .header-content .logo-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1600;
+    padding: 40px 30px;
+    z-index: 99;
+    transition:  0.3s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .header-content .logo-menu.active-menu{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header-content ul.list-nav{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 350px;
+    max-width: 100%;
+    padding: 40px 30px 30px;
+    margin: 0;
+    background-color: #0a2748;
+  
+    transform: translateX(100%);
+    transition: transform .5s;
+    display: block;
+  }
+  .header-content .logo-menu.active-menu ul.list-nav{
+    transform: none;
+  }
+  .header-content  .list-nav{
+    flex-direction: column;
+  }
+  .header-content .list-nav li{
+    margin: 0;
+    padding: 5px 0px 10px 0;
+    border-bottom: 1px solid #113762;
+    text-align: left;
+  }
+  .header-content .menu-icon.active-menu{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 111;
+    width: 350px;
+    right: 0;
+    text-align: right;
+    padding-right: 15px;
+    transition: .5s;
+  }
+  .off-modal-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: #1F1F1F;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .active-menu   .off-modal-layer{
+    opacity: 0.5;
+    visibility: visible;
+  }
+  .mobile-navigation{
+    display: block;
+  }
+  /* .mobile-menu-container{
+    left: 0;
+    top: 0;
+    margin: 0;
+    position: fixed;
+    max-width: 100%;
+    width: 350px;
+    height: 100%;
+    padding: 30px;
+    background-color: #0a2748;
+    display: block;
+    transition: -webkit-transform .4s ease;
+    transition: transform .4s ease;
+    transition: transform .4s ease,-webkit-transform .4s ease;
+    -webkit-transform: translateX(350px);
+    transform: translateX(350px);
+  } */
+  .modal-opened .mobile-menu-container{
+    transform: none;
+  }
+  /* .modal-opened .mobile-menu-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9990;
+    cursor: pointer;
+    background-color: rgba(0,0,0,.5);
+    opacity: 1;
+    visibility: visible;
+  } */
 }
 @media only screen and (max-width: 910px) {
   .header-menu .col-xs-12 .logo {
@@ -2900,7 +3010,7 @@ h3 {
   opacity: 0;
   background-color: #273c97;
   padding: 15px 0;
-  z-index: 3;
+  z-index: 0;
   position: relative;
 }
 .text-blue p{
