@@ -1055,9 +1055,10 @@ color: #0a2747;
 }
 .demo.elementor .image6 {
     position: absolute;
-    top: 50%;
+    top: 35%;
     transform: translateY(-50%);
-    left: 15%;
+    left: 16%;
+    animation: myOrbit 4s linear infinite;
 }
 .images-wrap {
     background: url("../img/bg-element.png") center center no-repeat;
@@ -2168,6 +2169,13 @@ h3 {
     font-size: 54px;
   }
 }
+.active-menu{
+  transform: translateX(0) !important;
+}
+.menu-icon.active-menu a::before{
+  content: "\00d7" !important;
+  font-size: 35px;
+}
 @media only screen and (max-width: 1024px) {
   .blog-quickview::before, .blog-quickview::after{
     content: none;
@@ -2186,6 +2194,9 @@ h3 {
   }
   .header-banner .images-grid{
     display: none;
+  }
+  .logo-menu{
+    transform: translateX(-100%);
   }
   .hidden-menu{
     display: none;
@@ -3050,4 +3061,8 @@ h3 {
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+@keyframes myOrbit {
+  from { transform: rotate(0deg) translateX(10px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(10px) rotate(-360deg); }
 }

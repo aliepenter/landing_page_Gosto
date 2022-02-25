@@ -27,7 +27,7 @@
 							<img src="img/logo.png" alt="images-logo">
 						</a>
 					</div>
-					<div class="logo-menu hidden-menu">
+					<div class="logo-menu">
 						<ul class="flex-layout">
 							<li><a href="#">Demos</a></li>
 							<li><a href="#features">Features</a></li>
@@ -1042,11 +1042,20 @@
 	<script>
 		
 		$(document).ready(function () {
-			
+			$('.menu-icon a').click(function(event){
+				event.preventDefault();
+				$('.logo-menu').toggleClass('active-menu')
+				$('.menu-icon').toggleClass('active-menu')
+			})
 			$('.lazy-video').height($(window).height())
-			$('.header-banner').addClass('load');
-			$('.text-blue').addClass('load');
-			$('.header-inner').addClass('header-inner-load');
+			var video = $(".lazy-video").get(0);
+			if(video.played){
+			setTimeout(function(){
+				$('.header-banner').addClass('load');
+				$('.text-blue').addClass('load');
+				$('.header-inner').addClass('header-inner-load');
+			},2000)
+			}
 			$("#nav-tabs-wrapper li a").click(function () {
 				$("#nav-tabs-wrapper li").removeClass("active");
 				$(this).closest("li").addClass("active");
